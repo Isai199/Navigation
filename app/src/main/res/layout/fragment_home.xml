@@ -5,26 +5,82 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tvText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/btnHomeToInside"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvText"
-        android:text="Lets go"/>
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Fragment"
+            app:layout_constraintBottom_toTopOf="@id/etNombre"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Ingreasa tu nombre"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/etPaterno"
+            app:layout_constraintTop_toBottomOf="@id/tvText"/>
+        <EditText
+            android:id="@+id/etPaterno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Ingreasa tu apellido paterno"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/etMaterno"
+            app:layout_constraintTop_toBottomOf="@id/etNombre"/>
+        <EditText
+            android:id="@+id/etMaterno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Ingreasa tu apellido materno"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/etUser"
+            app:layout_constraintTop_toBottomOf="@id/etPaterno"/>
+        <EditText
+            android:id="@+id/etUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Ingreasa tu nombre de usuario"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/etCorreo"
+            app:layout_constraintTop_toBottomOf="@id/etMaterno"/>
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Ingreasa tu correo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnHomeToProfile"
+            app:layout_constraintTop_toBottomOf="@id/etUser"/>
+
+        <Button
+            android:id="@+id/btnHomeToProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lets go"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCorreo"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

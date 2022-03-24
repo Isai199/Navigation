@@ -10,9 +10,15 @@
         android:name="com.navigation.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
-        <action
+        <!--<action
             android:id="@+id/action_homeFragment_to_insideHome"
             app:destination="@id/insideHome" />
+        -->
+
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/insideHome"
@@ -28,7 +34,14 @@
         android:id="@+id/profileFragment"
         android:name="com.navigation.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="user"
+            app:argType="com.navigation.User" />
+
+    </fragment>
+
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.navigation.SettingsFragment"
